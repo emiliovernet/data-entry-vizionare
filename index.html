@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Vizionare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <img class="form-image" src="https://static.wixstatic.com/media/482205_1a87f87b6f3b4d5e87a167d3a7684511~mv2.png/v1/crop/x_0,y_89,w_1000,h_207/fill/w_165,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Vizionare%20h-p-f%20%206.png" alt="">
+        <h1 class="form-title">Data Entry</h1>
+        <form id="form" method="POST">
+
+            <div class="form-group">
+                <label for="nombre" class="form-label">Nombre</label>
+                <select id="Nombre" name="Nombre" class="form-input">
+                    <option>Elegir nombre</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="operacion" class="form-label">Operación</label>
+                <select id="Operacion" name="Operacion" class="form-input">
+                    <option>Elegir operación</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="Fecha" class="form-label">Fecha</label>
+                <input type="date" id="Fecha" name="Fecha" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="Comentarios">Comentarios</label>              
+                  <textarea class="textarea" name="Comentarios">
+                </textarea>
+            </div>
+
+            <button type="submit" class="form-submit">Enviar</button>
+            <div
+            id="message"
+            style="
+              display: none;
+              margin: 10px;
+              font-weight: bold;
+              color: green;
+              padding: 8px;
+              background-color: beige;
+              border-radius: 4px;
+              border-color: aquamarine;
+            ">
+            </div>
+
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
