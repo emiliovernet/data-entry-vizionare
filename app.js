@@ -1,6 +1,6 @@
 window.onload = () => {
   fetch(
-    "https://script.google.com/macros/s/AKfycbwHPgffOPRiqSMTK4TWTbVXybyIK_mqQSQ8IkzaThsIqScyzbRdiqqUXbBRS1viVsA/exec?sheetName=Sheet2"
+    "https://script.google.com/macros/s/AKfycbw3E7T598n28O7lJ85vslrHR4TfQbCaJ0koOw5RpMF3-m-QsIGJgSCeGFiRKOJjC_tqNg/exec?sheetName=Sheet2"
   )
     .then((response) => response.json())
     .then((data) => {
@@ -56,7 +56,7 @@ window.onload = () => {
 
     // Send a POST request to your Google Apps Script
     fetch(
-      "https://script.google.com/macros/s/AKfycbwHPgffOPRiqSMTK4TWTbVXybyIK_mqQSQ8IkzaThsIqScyzbRdiqqUXbBRS1viVsA/exec",
+      "https://script.google.com/macros/s/AKfycbw3E7T598n28O7lJ85vslrHR4TfQbCaJ0koOw5RpMF3-m-QsIGJgSCeGFiRKOJjC_tqNg/exec",
       {
         redirect: "follow",
         method: "POST",
