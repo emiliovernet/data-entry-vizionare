@@ -80,3 +80,15 @@ body {
 .text-danger {
   color: red;
 }
+
+.sending-message {
+  display: none;
+  margin: 10px;
+  font-weight: bold;
+  color: green;
+  padding: 8px;
+  background-color: beige;
+  border-radius: 4px;
+  border-color: aquamarine;
+}
+
