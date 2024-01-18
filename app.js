@@ -7,7 +7,9 @@ window.onload = () => {
       // Obtener la lista de nombres y operaciones
       const nombres = data.slice(1).map((row) => row[0]);
       const operaciones = data.slice(1).map((row) => row[1]);
-      const ubicaciones = data.slice(1).map((row) => row[2]);
+      const obras = data.slice(1).map((row) => row[2]);
+      const ubicaciones = data.slice(1).map((row) => row[3]);
+      const cateogorias = data.slice(1).map((row) => row[4]);
 
       // Llenar el campo de selección de nombres
       const selectNombre = document.getElementById("Nombre");
@@ -27,6 +29,15 @@ window.onload = () => {
         selectOperacion.appendChild(option);
       });
 
+      // Llenar el campo de selección de obras
+      const selectObra = document.getElementById("Obra");
+      obras.forEach((obra) => {
+        const option = document.createElement("option");
+        option.value = obra;
+        option.textContent = obra;
+        selectObra.appendChild(option);
+      });
+
       // Llenar el campo de selección de ubicaciones
       const selectUbicacion = document.getElementById("Ubicacion");
       ubicaciones.forEach((ubicacion) => {
@@ -35,6 +46,16 @@ window.onload = () => {
         option.textContent = ubicacion;
         selectUbicacion.appendChild(option);
       });
+
+      // Llenar el campo de selección de categorias
+      const selectCategoria = document.getElementById("Categoría");
+      cateogorias.forEach((categoria) => {
+        const option = document.createElement("option");
+        option.value = categoria;
+        option.textContent = categoria;
+        selectCategoria.appendChild(option);
+      });
+      
     })
     .catch((error) => {
       console.error("Error fetching names and operations:", error);
