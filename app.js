@@ -109,7 +109,7 @@ window.onload = () => {
             document.getElementById("message").style.display = "none";
             document.getElementById("message").style.backgroundColor = "beige";
             document.getElementById("message").style.color = "green";
-        }, 2600);
+        }, 2000);
     })
       .catch(function (error) {
         // Handle errors, you can display an error message here
