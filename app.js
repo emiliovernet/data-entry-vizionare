@@ -5,11 +5,11 @@ window.onload = () => {
     .then((response) => response.json())
     .then((data) => {
       // Obtener la lista de nombres y operaciones
-      const nombres = data.slice(1).map((row) => row[0]);
-      const operaciones = data.slice(1).map((row) => row[1]);
-      const obras = data.slice(1).map((row) => row[2]);
-      const ubicaciones = data.slice(1).map((row) => row[3]);
-      const cateogorias = data.slice(1).map((row) => row[4]);
+      const nombres = data.slice(1).map((row) => row[0]).filter(Boolean); // Filtrar valores vacíos
+      const operaciones = data.slice(1).map((row) => row[1]).filter(Boolean);
+      const obras = data.slice(1).map((row) => row[2]).filter(Boolean);
+      const ubicaciones = data.slice(1).map((row) => row[3]).filter(Boolean);
+      const cateogorias = data.slice(1).map((row) => row[4]).filter(Boolean);
 
       // Llenar el campo de selección de nombres
       const selectNombre = document.getElementById("Nombre");
@@ -102,7 +102,7 @@ window.onload = () => {
         document.getElementById("message").style.display = "block";
         document.getElementById("message").style.backgroundColor = "green";
         document.getElementById("message").style.color = "beige";
-        document.getElementById("form").reset();
+
 
         setTimeout(function () {
             document.getElementById("message").textContent = "";
@@ -119,4 +119,9 @@ window.onload = () => {
         document.getElementById("message").style.display = "block";
       });
   });
+
+  document.getElementById("resetFormButton").addEventListener("click", function () {
+    document.getElementById("form").reset(); // Resetea todo el formulario
+  });
+
 };

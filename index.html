@@ -21,31 +21,23 @@
       />
       <h1 class="form-title">Data Entry</h1>
       <form id="form" method="POST">
-        <div class="form-group">
-          <label for="nombre" class="form-label">Nombre</label>
-          <select id="Nombre" name="Nombre" class="form-input">
-            <option>Elegir nombre</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="Operacion" class="form-label">Operación</label>
-          <select id="Operacion" name="Operacion" class="form-input">
-            <option>Elegir operación</option>
-          </select>
-        </div>
-
+        
         <div class="form-group">
           <label for="Obra" class="form-label">Obra</label>
           <select id="Obra" name="Obra" class="form-input">
             <option>Elegir obra</option>
           </select>
         </div>
+        
+        <div class="form-group">
+          <label for="Fecha" class="form-label">Fecha</label>
+          <input type="date" id="Fecha" name="Fecha" class="form-input" />
+        </div>
 
         <div class="form-group">
-          <label for="Ubicacion" class="form-label">Ubicación</label>
-          <select id="Ubicacion" name="Ubicacion" class="form-input">
-            <option>Elegir ubicación</option>
+          <label for="nombre" class="form-label">Operario</label>
+          <select id="Nombre" name="Nombre" class="form-input">
+            <option>Elegir nombre</option>
           </select>
         </div>
 
@@ -57,8 +49,18 @@
         </div>
 
         <div class="form-group">
-          <label for="Fecha" class="form-label">Fecha</label>
-          <input type="date" id="Fecha" name="Fecha" class="form-input" />
+          <label for="Operacion" class="form-label">Operación</label>
+          <select id="Operacion" name="Operacion" class="form-input">
+            <option>Elegir operación</option>
+          </select>
+        </div>
+
+
+        <div class="form-group">
+          <label for="Ubicacion" class="form-label">Ubicación</label>
+          <select id="Ubicacion" name="Ubicacion" class="form-input">
+            <option>Elegir ubicación</option>
+          </select>
         </div>
 
         <div class="form-group">
@@ -80,9 +82,12 @@
             }
           }
         </script>
-
+        <div class="buttons-container">
         <button type="submit" class="form-submit">Enviar</button>
+        <button type="button" class="reset-button" id="resetFormButton">Finalizar</button> 
+        </div>
         <div id="message" class="sending-message"></div>
+        
       </form>
     </div>
     <script src="app.js"></script>

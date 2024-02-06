@@ -65,7 +65,16 @@ body {
   border: red solid 1px;
 }
 
-.form-submit {
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form-submit, .reset-button {
   padding: 10px 20px;
   background-color: #4c98af;
   color: white;
@@ -77,6 +86,10 @@ body {
   margin: auto
 }
 
+.reset-button {
+  background-color: #005230;
+
+}
 .text-danger {
   color: red;
 }
