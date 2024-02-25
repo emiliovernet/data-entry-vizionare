@@ -42,8 +42,6 @@ function loadData() {
       function updateOperaciones() {
         const selectedObra = obraSelect.value;
         const selectedCategoria = categoriaSelect.value.split(" ")[0];
-        console.log(selectedObra);
-        console.log(selectedCategoria);
 
         // Filtrar operaciones según la obra y categoría seleccionadas
         const filteredOperaciones = operaciones.filter((operacion) =>
